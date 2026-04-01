@@ -1,19 +1,15 @@
-import './App.css'
-import NavBar from "./components/NavBar"
-import './pages/Home'
+import "./App.css";
+import NavBar from "./components/NavBar";
+import "./pages/Home";
 
 function App() {
-
   return (
     <>
-    <NavBar />
-    <nav>
-      NAV2
-    </nav>
-
-    Hello World!
-    </NavBar>
-  )
+      <h1>TanatB</h1>
+      <NavBar />
+      <nav>NAV2</nav>
+    </>
+  );
 }
 
-export default App
+export default App;

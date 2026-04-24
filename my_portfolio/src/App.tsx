@@ -1,15 +1,25 @@
-import "./App.css";
-import NavBar from "./components/NavBar";
-import "./pages/Home";
+import TopBar from "./components/TopBar";
+import HeroSection from "./components/HeroSection";
+import AboutSection from "./components/AboutSection";
+import ProjectSection from "./components/ProjectSection";
+import ContactSection from "./components/ContactSection";
+import { projects } from "./data/projects";
 
 function App() {
+  const deProjects = projects.filter((p) => p.category === "de");
+  const sweProjects = projects.filter((p) => p.category === "swe");
+
   return (
-    <>
-      <h1>TanatB</h1>
-      <NavBar />
-      <nav>NAV2</nav>
-    </>
-  );
+    <div className="min-h-screen bg-bg text-ink">
+      <TopBar />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <ProjectSection id="de" title="Data Engineering" projects={deProjects} />
+        <ProjectSection id="swe" title="Software Engineering" projects={sweProjects} />
+        <ContactSection />
+      </main>
+    </div>);
 }
 
 export default App;

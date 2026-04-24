@@ -1,0 +1,11 @@
+# Claude Code internals — not for source control
+.agents/
+.claude/
+skills-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
